@@ -1,43 +1,33 @@
-import { contacts, personalData } from "@/lib/data";
-import { PlaceHolderImages } from "@/lib/placeholder-images";
-import { Avatar, AvatarFallback, AvatarImage } from "./ui/avatar";
-import { Button } from "./ui/button";
+import { personalData } from "@/lib/data";
 import Link from "next/link";
+import { Button } from "./ui/button";
 
 export function HeroSection() {
-  const avatarImage = PlaceHolderImages.find(img => img.id === 'ayush-ipar-avatar');
-
   return (
-    <section id="home" className="w-full py-20 md:py-32">
-      <div className="container text-center">
-        <div className="flex flex-col items-center space-y-4">
-          <Avatar className="h-24 w-24 shadow-lg">
-            {avatarImage && 
-              <AvatarImage src={avatarImage.imageUrl} alt={personalData.name} data-ai-hint={avatarImage.imageHint} />
-            }
-            <AvatarFallback className="text-3xl">{personalData.name.split(' ').map(n => n[0]).join('')}</AvatarFallback>
-          </Avatar>
-          <div className="space-y-2">
-            <h1 className="text-3xl sm:text-5xl font-bold tracking-tighter">
-              {personalData.name}
-            </h1>
-            <p className="text-muted-foreground">
-              {personalData.title}
-            </p>
-          </div>
-          <div id="contact" className="flex justify-center items-center gap-4">
-            {contacts.map((contact) => (
-               <Button key={contact.typeOfContact} variant="outline" asChild>
-                  <Link href={contact.link} target="_blank" rel="noopener noreferrer">
-                    <contact.icon className="mr-2 h-4 w-4" />
-                    {contact.typeOfContact.charAt(0).toUpperCase() + contact.typeOfContact.slice(1)}
-                  </Link>
-               </Button>
-            ))}
-          </div>
-           <p className="mt-4 max-w-2xl mx-auto text-muted-foreground">
+    <section id="home" className="w-full">
+      <div className="container flex flex-col md:flex-row items-center justify-between gap-12 px-8 md:px-20 py-24 min-h-[85vh]">
+        <div className="max-w-2xl text-center md:text-left">
+          <h4 className="text-blue-400 font-medium mb-2">Hi, I'm {personalData.name}</h4>
+          <h1 className="text-5xl md:text-6xl font-bold leading-tight mb-5">
+            Developer of <span className="bg-gradient-to-r from-blue-400 to-violet-400 bg-clip-text text-transparent">Mode</span>
+          </h1>
+          <p className="text-slate-300 leading-relaxed mb-8 max-w-xl mx-auto md:mx-0">
             {personalData.summary}
           </p>
+          <div className="flex justify-center md:justify-start gap-4">
+            <Button asChild size="lg" className="rounded-lg bg-gradient-to-br from-blue-500 to-indigo-500 text-white shadow-[0_4px_20px_rgba(99,102,241,0.4)] hover:-translate-y-0.5 transition-transform">
+              <Link href="#projects">View Projects</Link>
+            </Button>
+            <Button asChild size="lg" variant="outline" className="rounded-lg border-white/10 bg-white/5 text-slate-300 hover:bg-white/10 hover:text-slate-100 transition-colors">
+              <Link href="#ask-ai">Chat with AI →</Link>
+            </Button>
+          </div>
+        </div>
+
+        <div className="relative hidden md:block">
+          <div className="w-[300px] h-[380px] bg-white/5 border border-white/10 rounded-2xl backdrop-blur-md flex items-center justify-center text-blue-400 text-xl shadow-[0_0_40px_rgba(59,130,246,0.15)]">
+            Ayush Ipar
+          </div>
         </div>
       </div>
     </section>

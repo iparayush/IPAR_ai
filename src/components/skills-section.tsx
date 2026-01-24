@@ -3,14 +3,14 @@ import { TechIcon } from "./tech-icon";
 
 export function SkillsSection() {
   return (
-    <section id="skills" className="w-full py-16 md:py-24 bg-muted/30">
+    <section id="skills" className="w-full py-16 md:py-24">
       <div className="container">
         <h2 className="text-3xl font-bold text-center mb-12">Tech Stack</h2>
         <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-4 xl:grid-cols-8 gap-6 max-w-5xl mx-auto">
           {technologies.map(tech => (
-            <div key={tech} className="group flex flex-col items-center justify-center gap-3 p-4 rounded-lg bg-card border shadow-sm transition-all hover:shadow-lg hover:-translate-y-1 hover:border-primary">
+            <div key={tech} className="group flex flex-col items-center justify-center gap-3 p-4 rounded-lg bg-slate-900/50 border border-white/10 shadow-sm transition-all hover:shadow-lg hover:-translate-y-1 hover:border-blue-400 hover:bg-slate-900">
               <TechIcon name={tech} />
-              <span className="text-sm font-medium text-center">{tech}</span>
+              <span className="text-sm font-medium text-center text-slate-300 group-hover:text-white">{tech}</span>
             </div>
           ))}
         </div>
