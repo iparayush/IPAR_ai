@@ -10,6 +10,7 @@ export function SiteHeader() {
         <nav className="hidden items-center gap-8 text-sm md:flex">
           <Link href="#about" className="text-slate-300 transition-colors hover:text-blue-400">About</Link>
           <Link href="#skills" className="text-slate-300 transition-colors hover:text-blue-400">Skills</Link>
+          <Link href="#experience" className="text-slate-300 transition-colors hover:text-blue-400">Experience</Link>
           <Link href="#projects" className="text-slate-300 transition-colors hover:text-blue-400">Projects</Link>
           <Link href="#ask-ai" className="text-slate-300 transition-colors hover:text-blue-400">Ask AI</Link>
           <Link href="#contact" className="text-slate-300 transition-colors hover:text-blue-400">Contact</Link>

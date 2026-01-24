@@ -4,15 +4,21 @@ import Link from "next/link";
 import { Button } from "./ui/button";
 import { useContacts } from "@/hooks/use-contacts";
 import { Skeleton } from "./ui/skeleton";
+import { useState, useEffect } from "react";
 
 export function SiteFooter() {
   const { contacts, loading, error } = useContacts();
+  const [year, setYear] = useState(new Date().getFullYear());
+
+  useEffect(() => {
+    setYear(new Date().getFullYear());
+  }, []);
 
   return (
     <footer className="w-full border-t border-border/40 bg-background">
       <div className="container py-8 flex flex-col md:flex-row items-center justify-between gap-4">
         <p className="text-sm text-muted-foreground text-center">
-          &copy; {new Date().getFullYear()} {personalData.name}. All rights reserved.
+          &copy; {year} {personalData.name}. All rights reserved.
         </p>
         <div className="flex items-center gap-2">
           {loading && (
