@@ -1,5 +1,5 @@
 import type { Icon } from "lucide-react";
-import { Mail, Phone, Linkedin } from "lucide-react";
+import { Mail, Linkedin, Github } from "lucide-react";
 
 export type Experience = {
   company: string;
@@ -9,7 +9,7 @@ export type Experience = {
 };
 
 export type Contact = {
-  typeOfContact: 'email' | 'phone' | 'linkedin';
+  typeOfContact: 'email' | 'linkedin' | 'github';
   value: string;
   link: string;
   icon: Icon;
@@ -19,19 +19,19 @@ export type Contact = {
 export const personalData = {
   name: 'Ayush Ipar',
   title: 'Software Engineer & Google Developer Expert - Firebase',
-  summary: 'A passionate Software Engineer with experience in building robust and scalable web applications. Expertise in Java, JavaScript, and cloud technologies, with a strong focus on the Firebase ecosystem.',
+  summary: 'I am a passionate Software Engineer with a knack for building robust and scalable web applications. I have a strong foundation in Java and JavaScript, and I am a Google Developer Expert for Firebase.',
 };
 
 export const contacts: Contact[] = [
     { typeOfContact: 'email', value: 'IPARAYUSH@gmail.com', link: 'mailto:IPARAYUSH@gmail.com', icon: Mail },
-    { typeOfContact: 'phone', value: '7020578889', link: 'tel:+917020578889', icon: Phone },
+    { typeOfContact: 'github', value: 'iparayush', link: 'https://github.com/iparayush', icon: Github },
     { typeOfContact: 'linkedin', value: 'iparayush', link: 'https://www.linkedin.com/in/iparayush/', icon: Linkedin },
 ];
 
 export const experiences: Experience[] = [
   {
     company: 'Addepar',
-    role: 'Software Engineer 2',
+    role: 'Software Engineer',
     period: 'July 2024 - Present',
     description: 'Developing and maintaining high-quality software solutions in the fintech domain, contributing to a platform that manages complex financial portfolios.'
   },

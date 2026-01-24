@@ -1,6 +1,7 @@
 import { SiteHeader } from '@/components/site-header';
 import { SiteFooter } from '@/components/site-footer';
 import { HeroSection } from '@/components/hero-section';
+import { AboutSection } from '@/components/about-section';
 import { ExperienceSection } from '@/components/experience-section';
 import { SkillsSection } from '@/components/skills-section';
 
@@ -10,6 +11,7 @@ export default function Home() {
       <SiteHeader />
       <main className="flex-1">
         <HeroSection />
+        <AboutSection />
         <ExperienceSection />
         <SkillsSection />
       </main>
