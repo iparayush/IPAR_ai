@@ -12,6 +12,7 @@ export function SiteHeader() {
           <Link href="#skills" className="text-slate-300 transition-colors hover:text-blue-400">Skills</Link>
           <Link href="#projects" className="text-slate-300 transition-colors hover:text-blue-400">Projects</Link>
           <Link href="#ask-ai" className="text-slate-300 transition-colors hover:text-blue-400">Ask AI</Link>
+          <Link href="#contact" className="text-slate-300 transition-colors hover:text-blue-400">Contact</Link>
         </nav>
       </div>
     </header>
