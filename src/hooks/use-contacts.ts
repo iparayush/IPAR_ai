@@ -69,7 +69,7 @@ export function useContacts() {
 
           setContacts(fetchedContacts);
         } else {
-          console.log("No such document in Firestore! Please create it.");
+          console.log("No such document in Firestore! Please create it at 'users/main-user'.");
           setError(new Error("Contact information not found."));
         }
       } catch (err) {
