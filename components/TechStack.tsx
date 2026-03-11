@@ -35,7 +35,7 @@ const techLogos: { node: React.ReactNode; title: string; href: string }[] = [
 
 const TechStack: React.FC = () => {
   return (
-    <section className="py-12 bg-black/50 border-y border-zinc-800 overflow-hidden">
+    <section className="py-12 bg-transparent border-y border-zinc-800 overflow-hidden relative z-10">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-8">
         <h2 className="text-sm font-semibold text-zinc-500 uppercase tracking-widest text-center">
           Technologies I Work With

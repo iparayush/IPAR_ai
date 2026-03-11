@@ -1,14 +1,14 @@
 import React from 'react';
 import { motion } from 'motion/react';
-import { 
-  SiReact, 
-  SiJavascript, 
-  SiHtml5, 
-  SiCss, 
-  SiTypescript, 
-  SiTailwindcss, 
-  SiNodedotjs, 
-  SiPython, 
+import {
+  SiReact,
+  SiJavascript,
+  SiHtml5,
+  SiCss,
+  SiTypescript,
+  SiTailwindcss,
+  SiNodedotjs,
+  SiPython,
   SiCplusplus,
   SiC,
   SiR,
@@ -45,7 +45,7 @@ const getIcon = (name: string) => {
 
 const Skills: React.FC = () => {
   return (
-    <section id="skills" className="py-24 bg-black relative overflow-hidden">
+    <section id="skills" className="py-24 bg-transparent relative overflow-hidden z-10">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-4 tracking-tight">Technical Proficiency</h2>
@@ -65,17 +65,16 @@ const Skills: React.FC = () => {
               whileHover={{ y: -5, scale: 1.02 }}
               className="group relative bg-zinc-900/40 backdrop-blur-sm border border-zinc-800/50 rounded-2xl p-6 flex flex-col items-center justify-center text-center transition-all hover:bg-zinc-800/60 hover:border-primary/30"
             >
-              <div className={`text-4xl mb-4 transition-colors duration-300 ${
-                skill.category === 'Frontend' ? 'text-blue-400 group-hover:text-blue-300' : 
-                skill.category === 'Backend' ? 'text-purple-400 group-hover:text-purple-300' : 
-                skill.category === 'Cloud' ? 'text-cyan-400 group-hover:text-cyan-300' :
-                'text-emerald-400 group-hover:text-emerald-300'
-              }`}>
+              <div className={`text-4xl mb-4 transition-colors duration-300 ${skill.category === 'Frontend' ? 'text-blue-400 group-hover:text-blue-300' :
+                  skill.category === 'Backend' ? 'text-purple-400 group-hover:text-purple-300' :
+                    skill.category === 'Cloud' ? 'text-cyan-400 group-hover:text-cyan-300' :
+                      'text-emerald-400 group-hover:text-emerald-300'
+                }`}>
                 {getIcon(skill.name)}
               </div>
-              
+
               <h3 className="text-white font-medium mb-1 text-sm md:text-base">{skill.name}</h3>
-              
+
               <div className="flex items-center gap-2">
                 <span className="text-xs font-semibold text-slate-500 uppercase tracking-wider">{skill.category}</span>
                 <span className="w-1 h-1 rounded-full bg-slate-700"></span>

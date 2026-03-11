@@ -23,7 +23,13 @@ const App: React.FC = () => {
 
   return (
     <div className="min-h-screen bg-dark text-slate-200 font-sans selection:bg-primary/30">
-      <div style={{ width: '100%', height: '100vh', position: 'fixed', top: 0, left: 0, zIndex: 0, pointerEvents: 'none' }}>
+      {/* 
+        SplashCursor Background 
+        zIndex: 0 puts it behind most content.
+        We'll use pointerEvents: 'auto' so it can actually receive pointer events from empty space,
+        and keep it fixed behind everything.
+      */}
+      <div style={{ width: '100%', height: '100vh', position: 'fixed', top: 0, left: 0, zIndex: 0, pointerEvents: 'auto' }}>
         <SplashCursor
           SIM_RESOLUTION={128}
           DYE_RESOLUTION={1440}
